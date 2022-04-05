@@ -677,6 +677,9 @@ kubectl get events
 # Get Envents in an specific namespace
 kubectl get events -n [namespace_name]
 
+# Sort events by timestamp
+kubectl get events --sort-by='{.lastTimestamp}' -n [namespace_name]
+
 # Watch events in real time
 kubectl get events -n [namespace_name] -w
 ```
