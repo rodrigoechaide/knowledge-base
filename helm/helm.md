@@ -18,8 +18,14 @@ helm repo add <name> <url> <flags>
 # Search charts in repository (This will show only the latest version of each chart)
 helm search repo <repo_name>
 
-# Search charts in a repository (This will show all charts available versions)
+# Search charts in repository (This will show all the versions of all available charts in the repository)
 helm search repo <repo_name> [-l/--versions]
+
+# Search a chart in all existing repositories (This will show only the latest version of each chart)
+helm search repo [<chart_name>/<keyword>]
+
+# Search a chart in all existing repositories (This will show all charts available versions)
+helm search repo [<chart_name>/<keyword>] [-l/--versions]
 
 # Show chart definition
 helm show chart <repo_name>/<chart_name> --version <chart_version>
