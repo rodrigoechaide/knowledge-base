@@ -1,4 +1,4 @@
-# maven-learning
+# maven cheat sheet
 
 ## Docker
 

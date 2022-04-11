@@ -1,102 +1,5 @@
 # Unix Cli Useful Tools and Commands
 
-## Load/Performance Tests Tools
-
-### Apache Benchmark
-
-```bash
-# Perform http load test with 10 request of concurrency and with a total of 1000 requests to https://test-site.com/api/ site
-ab -c 10 -n 1000 https://test-site.com/api/
-```
-
-### Apache Jmeter
-
-```bash
-TBC
-```
-
-### stress
-
-It is recommended to run this tool with root privileges.
-
-```bash
-# Stress using CPU-bound task
-stress --cpu 4 --timeout 10 --verbose
-
-# Stress using IO-bound task
-stress --io 2 --timeout 20 --quiet
-
-# Stress system memory
-stress-ng --vm 1 --vm-bytes 5G
-```
-
-More Info:
-* https://linux.die.net/man/1/stress
-* https://www.tecmint.com/linux-cpu-load-stress-test-with-stress-ng-tool/
-
-## stress-ng (stress next-generation)
-
-It is recommended to run this tool with root privileges.
-
-```bash
-# Run 8 CPU stressors with a timeout of 60 seconds and a summary at the end of operations
-stress-ng --cpu 8 --timeout 60 --metrics-brief
-
-# Run 5 hdd stressors and stop after 100000 bogo operations.
-stress-ng --hdd 5 --hdd-ops 100000
-
-# Run 8 CPU stressors, 4 I/O stressors and 1 virtual memory stressor using 1GB of virtual memory for one minute
-stress-ng --cpu 4 --io 4 --vm 1 --vm-bytes 1G --timeout 60s --metrics-brief
-
-# Run 1 virtual memory stressor using 5GB of virtual memory
-stress-ng --vm 1 --vm-bytes 5G
-```
-
-More Info:
-* https://manpages.ubuntu.com/manpages/artful/man1/stress-ng.1.html
-* https://www.tecmint.com/linux-cpu-load-stress-test-with-stress-ng-tool/2/
-
-## HTTP Tools
-
-### curl
-
-```bash
-# Make an HTTP request passing a user
-curl -u user http://localhost:8080
-
-# Make an HTTP request passing a user and a password
-curl -u user:password http://localhost:8080
-
-# Make a HTTP request passing custom headers
-curl https://reqbin.com/echo/get/json -H "X-Custom-Header: value" -H "Content-Type: application/json"
-
-# Make a HTTP request without certificate checking
-curl -k [options] [url]
-curl --insecure [options] [url]
-
-# Make a HTTP request sending a client certificate to perform mutual authentication (mutual TLS)
-curl https://test.host.com --cert [certificate.crt/pem] --key [privatekey.key/pem]
-curl https://test.host.com --cert [certificate.crt/pem]:[passphrase] --key [privatekey.key/pem]
-curl https://test.host.com --cert [certificate.crt/pem]:[passphrase] --key [privatekey.key/pem] --cacert [cacer.crt/pem]
-
-```
-
-Notes:
-
-* `--cacert` flag will be used so curl can trust in the certificate presented by the server. This verification can be skipped using `-k` or `--insecure` flags
-
-More Info:
-
-* https://reqbin.com/curl
-* https://reqbin.com/
-* https://smallstep.com/hello-mtls/doc/client/curl
-
-### wget
-
-```bash
-TBC
-```
-
 ## Change User/Privilege Escalation
 
 ### gosu
@@ -117,7 +20,7 @@ TBC
 TBC
 ```
 
-## Process and Resources Analysis 
+## Process and Resources Analysis
 
 ### General Tools
 

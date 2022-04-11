@@ -1,6 +1,6 @@
 # kubernetes-learning
 
-Gist to have as a reference for Kubernetes Learning. 
+Gist to have as a reference for Kubernetes Learning.
 
 ## Table of contents
 
@@ -753,7 +753,7 @@ kubectl taint nodes [node_name] key:NoSchedule-
 
 Before beign able to run the following commands the metric API should be installed. Check [this](#monitoring)
 
-```
+```bash
 # Get CPU and Memory utilization of the nodes in the cluster
 kubectl top node
 
@@ -778,7 +778,6 @@ kubectl -n [namespace_name] top pod --sort-by cpu --selector key=value
 # Get cluster information
 kubectl cluster-info
 ```
-
 
 ### Exporting kubernetes api resources/objects
 

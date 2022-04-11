@@ -1,6 +1,4 @@
-# helm
-
-## useful commands
+# helm cheat sheet
 
 ```bash
 # List helm releases

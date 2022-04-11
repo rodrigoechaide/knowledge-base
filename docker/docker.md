@@ -1,4 +1,4 @@
-# docker-learning
+# docker cheat sheet
 
 Project to start practicing with docker containers and docker-compose. To begin with the learning enviroment run in a console inside the project:
 

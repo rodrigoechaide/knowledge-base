@@ -1,4 +1,4 @@
-# git-learning
+# git cheat sheet
 
 Gist to start learning git and to highlight its most common commands.
 

@@ -1,6 +1,4 @@
-# flux
-
-## useful commands
+# flux cheat sheet
 
 ```bash
 # Check flux status
