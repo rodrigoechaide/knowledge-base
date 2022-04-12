@@ -56,6 +56,7 @@ Improve this readme and put it in a repo together with .zshrc file plus Pipenv f
     * tmux [tmux-wiki](https://github.com/tmux/tmux/wiki)
   * Install container images tools
     * dive (https://github.com/wagoodman/dive)
+    * skopeo (https://github.com/containers/skopeo/blob/main/install.md)
   * Configure pipenv environment (store this in a github repo) with useful python libraries and configure zsh to start that venv with each shell. Put in the prompt a very short text indicating that we are inside the venv. (https://github.com/pypa/pipenv/issues/1509)
 
 Tools: https://itsfoss.com/legacy-linux-commands-alternatives/
