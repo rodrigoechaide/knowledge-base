@@ -187,6 +187,20 @@ Delete all stopped containers
 
 `docker rm $(docker ps --filter status=exited -aq)`
 
+### Docker clean up commands
+
+Check docker used disk space
+
+`docker system df`
+
+Prune disk space
+
+`docker system prune`
+
+Clean docker builder cache
+
+`docker builder prune -a -f`
+
 ### Docker volumes manipulation
 
 List available volumes
