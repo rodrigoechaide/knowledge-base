@@ -4,11 +4,11 @@
 
 ### Vim
 
-- [vim cheat sheet](vim/cheat-sheet.md)
+- [vim cheat sheet](code-editors/vim/cheat-sheet.md)
 
 ### Vscode
 
-- [python cheat sheet](vscode/python/cheat-sheet.md)
+- [python cheat sheet](code-editors/vscode/python/cheat-sheet.md)
 
 ## Docker
 
@@ -30,7 +30,7 @@
 
 - [maven cheat sheet](maven/cheat-sheet.md)
 
-## SCM
+## Software Configuration Management
 
 - [git cheat sheet](scm/git/cheat-sheet.md)
 - [semantic commit messages](scm/git/semantic-commit-messages.md)
@@ -44,11 +44,8 @@
 ### Networking
 
 - [linux networking tools](unix-cli-useful-tools-commands/networking/linux-networking-tools.md)
-
-#### HTTP
-
-- [curl cheat sheet](unix-cli-useful-tools-commands/networking/http/curl.md)
-- [wget cheat sheet](unix-cli-useful-tools-commands/networking/http/wget.md)
+- [curl cheat sheet](unix-cli-useful-tools-commands/networking/curl.md)
+- [wget cheat sheet](unix-cli-useful-tools-commands/networking/wget.md)
 
 ### Package Managers
 
@@ -61,7 +58,7 @@
 - [stress-ng cheat sheet](unix-cli-useful-tools-commands/performance-testing/stress-ng.md)
 - [stress cheat sheet](unix-cli-useful-tools-commands/performance-testing/stress.md)
 
-## PKI
+### PKI
 
 - [cfssl cheat sheet](unix-cli-useful-tools-commands/pki/cfssl.md)
 - [openssl cheat sheet](unix-cli-useful-tools-commands/pki/openssl.md)

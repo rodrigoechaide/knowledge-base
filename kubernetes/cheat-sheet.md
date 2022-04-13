@@ -158,7 +158,7 @@ These steps show how to provision a k8s with containerd as container runtime usi
 
 Following steps should be run in all nodes (master and workers):
 
-```bash
+```text
 # Create configuration file for containerd
 cat <<EOF | sudo tee /etc/modules-load.d/containerd.conf
 overlay
@@ -223,7 +223,7 @@ sudo apt-mark hold kubelet kubeadm kubectl
 
 Following steps should be only run in master nodes:
 
-```bash
+```text
 # Initialize the Kubernetes Cluster
 sudo kubeadm init --pod-network-cidr 192.168.0.0/16 --kubernetes-version 1.21.0
 
@@ -253,7 +253,7 @@ sudo kubeadm token list
 
 Following steps should be run in worker nodes:
 
-```bash
+```text
 sudo kubeadm join 172.31.105.135:6443 --token yf1zxq.fu7zx2qmyat2rrx9 --discovery-token-ca-cert-hash sha256:9af9520166d86679f711dcbe3d6736b09cc0b6a7486ab8dc7f6eb30665ab350d
 ```
 
@@ -263,7 +263,7 @@ First of all, the master nodes should be upgraded and then the worker nodes.
 
 Following commands should be run in the Master Node
 
-```bash
+```text
 # Upgrade kubeadm
 sudo apt-get update && sudo apt-get install -y --allow-change-held-packages kubeadm=1.21.1-00
 
@@ -295,7 +295,7 @@ kubectl get nodes
 
 Following commands should be run in worker nodes
 
-```bash
+```text
 # Drain the node
 kubectl drain [worker_node_name] --ignore-daemonsets --force
 
@@ -334,7 +334,7 @@ More Info:
 
 ### Cluster management with kubectl
 
-```bash
+```text
 
 # Get information of configured clusters in kubectl
 kubectl config view
@@ -358,7 +358,7 @@ kubectl --insecure-skip-tls-verify get pods
 
 ### Manage TLS and Certificates
 
-```bash
+```text
 # Managing TLS in the Cluster: https://kubernetes.io/docs/tasks/tls/managing-tls-in-a-cluster/
 # Certificate Signing Requests: https://kubernetes.io/docs/reference/access-authn-authz/certificate-signing-requests/
 # Bootstrapping TLS for Your kubelets: https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet-tls-bootstrapping/
@@ -375,7 +375,7 @@ kubectl certificate approve [csr_name]
 
 ### Manage Service Accounts, Cluster Roles and Cluster Role Bindings
 
-```bash
+```text
 # https://kubernetes.io/docs/tasks/configure-pod-container/configure-service-account/
 
 # List existing service accounts
@@ -390,7 +390,7 @@ kubectl create clusterrolebinding cluster-system-anonymous --clusterrole=cluster
 
 ### Manage Pods
 
-```bash
+```text
 # Configure Default CPU Requests and Limits: https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/cpu-default-namespace/
 # Configure Default Memory Requests and Limits: https://kubernetes.io/docs/tasks/administer-cluster/manage-resources/memory-default-namespace/
 # Container Probes: https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#container-probes
@@ -488,20 +488,20 @@ kubectl label pod [pod_name] label-key=label-value --overwrite
 
 ### Manage DaemonSets
 
-```bash
+```text
 # DaemonSets: https://kubernetes.io/docs/concepts/workloads/controllers/daemonset/
 ```
 
 ### Manage Jobs and CronJobs
 
-```bash
+```text
 # Jobs: https://kubernetes.io/docs/concepts/workloads/controllers/job/
 # CronJobs: https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/
 ```
 
 ### Manage ReplicaSets
 
-```bash
+```text
 # ReplicaSets: https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/
 
 # Get existing ReplicaSets
@@ -511,7 +511,7 @@ kubectl get replicasets
 
 ### Manage StatefulSets
 
-```bash
+```text
 # StatefulSets: https://kubernetes.io/docs/concepts/workloads/controllers/statefulset/
 
 # Get existing ReplicaSets
@@ -523,7 +523,7 @@ kubectl describe statefulsets
 
 ### Manage Deployments
 
-```bash
+```text
 # Manage Deployments: https://kubernetes.io/docs/concepts/cluster-administration/manage-deployment/
 # https://kubernetes.io/docs/concepts/workloads/controllers/deployment/
 # https://kubernetes.io/docs/tutorials/kubernetes-basics/deploy-app/deploy-intro/
@@ -576,7 +576,7 @@ kubectl set image deployments/kubeserve app=linuxacademycontent/kubeserve:v2 --v
 
 ### Manage Services, Networking and DNS
 
-```bash
+```text
 # Configure Port Forwarding
 # This commands have the same effect and forward a port in local machine where kubectl is running to a port inside the cluster where the pod is running.
 kubectl port-forward [pod_name] 7000:6379
@@ -612,7 +612,7 @@ kubectl annotate service kubeserve2 externalTrafficPolicy=Local
 
 ### Manage Ingress
 
-```bash
+```text
 # Ingress: https://kubernetes.io/docs/concepts/services-networking/ingress/
 
 # View the list of services in the cluster
@@ -629,7 +629,7 @@ kubectl edit ingress -n [namespace_name]
 
 ### Manage ConfigMaps and Secrets
 
-```bash
+```text
 # https://kubernetes.io/docs/tasks/configure-pod-container/configure-pod-configmap/
 # https://kubernetes.io/docs/concepts/configuration/secret/
 
@@ -658,7 +658,7 @@ kubectl get secrets
 
 ### Manage Namespaces
 
-```bash
+```text
 # Create a namespace
 kubectl create namespace [namespace_name]
 
@@ -668,7 +668,7 @@ kubectl delete namespace [namespace_name]
 
 ### Manage Events
 
-```bash
+```text
 # https://kubernetes.io/docs/tasks/administer-cluster/configure-multiple-schedulers/#verifying-that-the-pods-were-scheduled-using-the-desired-schedulers
 
 # Get Events in default namespace
@@ -686,7 +686,7 @@ kubectl get events -n [namespace_name] -w
 
 ### Manage Storage
 
-```bash
+```text
 # Storage: https://kubernetes.io/docs/concepts/storage/
 # Volumes: https://kubernetes.io/docs/concepts/storage/volumes/
 # Persistent Volumes: https://kubernetes.io/docs/concepts/storage/persistent-volumes/
@@ -711,13 +711,13 @@ kubectl describe sc [sc_name]
 
 ### Manage Schedulling
 
-```bash
+```text
 # Configuring Multiple Schedulers: https://kubernetes.io/docs/tasks/administer-cluster/configure-multiple-schedulers/
 ```
 
 ### Manage Nodes
 
-```bash
+```text
 # Assigning Pod to a Node: https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/
 # Pod and Node Affinity Rules: https://kubernetes.io/docs/concepts/scheduling-eviction/assign-pod-node/#affinity-and-anti-affinity
 # Taints and Tolerations: https://kubernetes.io/docs/concepts/scheduling-eviction/taint-and-toleration/
@@ -753,7 +753,7 @@ kubectl taint nodes [node_name] key:NoSchedule-
 
 Before beign able to run the following commands the metric API should be installed. Check [this](#monitoring)
 
-```bash
+```text
 # Get CPU and Memory utilization of the nodes in the cluster
 kubectl top node
 
@@ -781,7 +781,7 @@ kubectl cluster-info
 
 ### Exporting kubernetes api resources/objects
 
-```bash
+```text
 # Run a new deployment and get the output in yaml format with the --export flag
 kubectl run newdemo --image=cloudnatived/demo:hello --port=8888 --labels app=newdemo
 # Install neat kubectl plugin
@@ -792,7 +792,7 @@ kubectl get deployments newdemo -o yaml > deployment.yaml | kubectl neat
 
 ### Diffing Resoruces
 
-```bash
+```text
 # Diff the resource to be deployed with the resource already deployed
 kubectl diff -f deployment.yaml
 ```
@@ -803,7 +803,7 @@ kubectl diff -f deployment.yaml
 
 When a namespace is in Terminating state following commands can be run to check what are the dangling resources that stops the namespace of beign deleted
 
-```bash
+```text
 kubectl api-resources --verbs=list --namespaced -o name | xargs -n 1 kubectl get --show-kind --ignore-not-found -n <namespace-in-terminating-stage>
 ```
 
@@ -813,7 +813,7 @@ More info:
 
 ### Patching dangling resources
 
-```bash
+```text
 # Patching dangling resources to remove the finalizer so the object can be deleted
 kubectl patch <resource-type> <resource-name> -p '{"metadata":{"finalizers":[]}}' --type=merge
 ```

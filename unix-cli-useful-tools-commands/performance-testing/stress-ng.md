@@ -2,7 +2,7 @@
 
 It is recommended to run this tool with root privileges.
 
-```bash
+```text
 # Run 8 CPU stressors with a timeout of 60 seconds and a summary at the end of operations
 stress-ng --cpu 8 --timeout 60 --metrics-brief
 

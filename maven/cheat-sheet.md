@@ -31,7 +31,7 @@
 * [Settings Reference](https://maven.apache.org/settings.html)
 * [Security Settings](https://maven.apache.org/guides/mini/guide-encryption.html)
 
-```bash
+```text
 # Specify settings.xml file from mvn cli
 mvn -s <path/to/settings.xml> <goals or phases>
 mvn -s ~/.m2/settings-custom.xml clean install
@@ -45,7 +45,7 @@ mvn -Dmaven.repo.local=<pat/to/local/repo>
 
 ### Help Plugin
 
-```bash
+```text
 # Check which profiles are actives
 mvn help:active-profiles
 
@@ -58,14 +58,14 @@ mvn help:evaluate -Dexpression=project.version -q -DforceStdout -N
 
 ### Dependency Plugin
 
-```bash
+```text
 # To view dependency tree
 mvn dependency:tree
 ```
 
 ### Exec Plugin
 
-```bash
+```text
 # Get maven project version
 mvn -q -Dexec.executable=echo -Dexec.args='${project.version}' --non-recursive exec:exec
 ```

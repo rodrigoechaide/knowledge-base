@@ -1,5 +1,5 @@
 # apache jmeter cheatsheet
 
-```bash
+```text
 TBC
 ```

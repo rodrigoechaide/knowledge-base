@@ -1,6 +1,6 @@
 # step
 
-```bash
+```text
 # Check certificate validity
 step certificate inspect https://smallstep.com --format json | jq .validity
 

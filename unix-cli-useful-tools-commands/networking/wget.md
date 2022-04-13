@@ -1,5 +1,5 @@
 # wget cheat sheet
 
-```bash
+```text
 TBC
 ```

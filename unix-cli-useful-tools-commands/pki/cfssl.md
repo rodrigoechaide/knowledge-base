@@ -1,6 +1,6 @@
 # cfssl
 
-```bash
+```text
 TBC
 ```
 

@@ -1,6 +1,6 @@
 # helm cheat sheet
 
-```bash
+```text
 # List helm releases
 helm ls
 

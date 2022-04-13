@@ -2,7 +2,7 @@
 
 It is recommended to run this tool with root privileges.
 
-```bash
+```text
 # Stress using CPU-bound task
 stress --cpu 4 --timeout 10 --verbose
 

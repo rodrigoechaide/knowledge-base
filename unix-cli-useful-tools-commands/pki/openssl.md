@@ -2,14 +2,14 @@
 
 ## Certificates Format Conversions
 
-```bash
+```text
 # Export a certificate plus the private key into a p12 file
 openssl pkcs12 -export -clcerts -inkey [private.key] -in [certificate.crt] -out [mypkcs.p12] -name "Some Name"
 ```
 
 ## Key Pairs Generation
 
-```bash
+```text
 # Generate a elliptic curve P-256 key pair
 openssl ecparam -name prime256v1 -genkey -out k.prv
 openssl ec -in k.prv -pubout -out k.pub
@@ -17,7 +17,7 @@ openssl ec -in k.prv -pubout -out k.pub
 
 ## CA and client/server certificates generation
 
-```bash
+```text
 # Generate the CA Key and Certificate
 openssl req -x509 -sha256 -newkey rsa:4096 -keyout ca.key -out ca.crt -days 3560 -nodes -subj '/CN=Fern Cert Authority'
 

@@ -4,7 +4,7 @@ Gist to start learning git and to highlight its most common commands.
 
 ## Show remote repositories configured in a specific repo
 
-```bash
+```text
 $ git remote -v
 origin git@github.com:rodrigoechaide/docker-learning.git (fetch)
 origin git@github.com:rodrigoechaide/docker-learning.git (push)
@@ -12,14 +12,14 @@ origin git@github.com:rodrigoechaide/docker-learning.git (push)
 
 Get only remote URL:
 
-```bash
+```text
 $ git config --get remote.origin.url
 git@github.com:rodrigoechaide/docker-learning.git
 ```
 
 Full output:
 
-```bash
+```text
 $ git remote show origin
 * remote origin
   Fetch URL: git@github.com:rodrigoechaide/docker-learning.git
@@ -35,13 +35,13 @@ $ git remote show origin
 
 ## Add new remote in a repository
 
-```bash
+```text
 git remote add github git@github.com:rodrigoechaide/insecure-registries-docker-role.git
 ```
 
 Verify:
 
-```bash
+```text
 $ git remote -v
 github git@github.com:rodrigoechaide/insecure-registries-docker-role.git (fetch)
 github git@github.com:rodrigoechaide/insecure-registries-docker-role.git (push)
@@ -51,13 +51,13 @@ gitlab git@gitlab.com:ansible-IT/ansible-generic-roles/insecure-registries-docke
 
 ## Clone a Project including its submodules
 
-```bash
+```text
 git clone --recursive git@github.com:rodrigoechaide/insecure-registries-docker-role.git
 ```
 
 ## Initialize submodules if project was cloned without --recursive switch
 
-```bash
+```text
 git submodule init
 git submodule update
 ```
@@ -66,17 +66,17 @@ git submodule update
 
 You need to specify the commit sha after which you want to squash commits into the following commit. Then for all subsequents commits you need to replace *pick* with *squash* or *fixup*
 
-```bash
+```text
 git rebase -i <commit-sha>
 ```
 
 or
 
-```bash
+```text
 git rebase -i HEAD~3
 ```
 
-```bash
+```text
 squash fa8d7eaa Updated fortify token and configure right version of fortify maven plugin                              
 squash e4fd1343 Change pom version to 21.2.0                                                                                     
 pick fd211d6e Added gitlab ci/cd configuration and adjusted pom files to get integration with gitlab ci/cd setup     
@@ -109,19 +109,19 @@ pick fd211d6e Added gitlab ci/cd configuration and adjusted pom files to get int
 
 If you have a new codebase with only two commits, you should run the following command to squash the two commits into one:
 
-```bash
+```text
 git rebase -i --root
 ```
 
 ## Modify Author of last commit
 
-```bash
+```text
 git commit --amend --author="Author Name <email@address.com>" --no-edit
 ```
 
 ## Remove last commit
 
-```bash
+```text
 # Hard Reset (All the file changes does not remain in the staging area and are lost)
 git reset --hard HEAD~1
 
@@ -133,20 +133,20 @@ Note: The soft reset can be used to delete a file from a commit.
 
 ## Set up upstream branch for a local branch
 
-```bash
+```text
 git branch -u <remote>/<branch>
 ```
 
 ## Delete a branch
 
-```bash
+```text
 # Forcefully delete several branches filtering with name pattern
 git branch -D `git branch --list 'minor/*'`
 ```
 
 ## Output Commit Logs
 
-```bash
+```text
 git log -1 --pretty=format:%h
 git log -1 --abbrev-commit
 
@@ -156,7 +156,7 @@ git rev-parse --short HEAD
 
 ## Set up name and email
 
-```bash
+```text
 # Config email and name in local repo only
 git config user.email "johndoe@abc.com"
 git config user.name "John Doe"

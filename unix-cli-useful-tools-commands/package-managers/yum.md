@@ -1,6 +1,6 @@
 # yum cheat sheet
 
-```bash
+```text
 # Check CentOS version
 lsb_release -a
 rpm --query centos-release

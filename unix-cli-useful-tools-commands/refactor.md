@@ -4,19 +4,19 @@
 
 ### gosu
 
-```bash
+```text
 TBC
 ```
 
 ### su
 
-```bash
+```text
 TBC
 ```
 
 ### sudo
 
-```bash
+```text
 TBC
 ```
 
@@ -26,7 +26,7 @@ TBC
 
 #### htop
 
-```bash
+```text
 TBC
 ```
 
@@ -36,7 +36,7 @@ More Info:
 
 #### kill
 
-```bash
+```text
 # List available signals
 kill -l
 
@@ -50,32 +50,32 @@ More Info:
 
 #### lsof
 
-```bash
+```text
 TBC
 ```
 
 #### ps
 
-```bash
+```text
 # Get a hierarchical way inter-processes dependency, a snapshot of all running processes and information related to threads corresponding to a particular process 
 ps -ef --forest
 ```
 
 #### systemd
 
-```bash
+```text
 TBC
 ```
 
 #### supervisord
 
-```bash
+```text
 TBC
 ```
 
 #### top
 
-```bash
+```text
 TBC
 ```
 
@@ -83,14 +83,14 @@ TBC
 
 #### free
 
-```bash
+```text
 # Check Free Memory
 free -m
 ```
 
 #### vmstat
 
-```bash
+```text
 # Check Free Memory
 vmstat
 ```
@@ -99,7 +99,7 @@ vmstat
 
 ### journald
 
-```bash
+```text
 # Check logs of nginx service unit
 journalctl -u nginx.service [--since today]
 
@@ -115,32 +115,32 @@ More Info:
 
 ### dig
 
-```bash
+```text
 TBC
 ```
 
 ### nmap
 
-```bash
+```text
 TBC
 ```
 
 ### netcat
 
-```bash
+```text
 # Open TCP Port
 nc -l 8080
 ```
 
 ### netstat
 
-```bash
+```text
 TBC
 ```
 
 ### nslookup
 
-```bash
+```text
 # Resolve a host name
 nslookup [dns-hosname] [dns-server]
 nslookup www.google.com 8.8.8.8
@@ -148,20 +148,20 @@ nslookup www.google.com 8.8.8.8
 
 ### ping
 
-```bash
+```text
 TBC
 ```
 
 ### ssh
 
-```bash
+```text
 # Connecting to a server specifying a user and a private key bypassing the fingerprint checking of the host
 ssh -l [username] -i [path_to_private_key_file] -o "StrictHostKeyChecking no"
 ```
 
 ### tcpdump
 
-```bash
+```text
 # Filter ICMP Packages
 tcpdump -i [interface_name] icmp
 
@@ -182,7 +182,7 @@ More Info:
 
 ### telnet
 
-```bash
+```text
 TBC
 ```
 
@@ -190,7 +190,7 @@ TBC
 
 ### awk
 
-```bash
+```text
 TBC
 ```
 
@@ -201,7 +201,7 @@ More Info:
 
 ### echo
 
-```bash
+```text
 TBC
 ```
 
@@ -211,7 +211,7 @@ More Info:
 
 ### cut
 
-```bash
+```text
 # Split by spaces and get the second splitted field
 echo "Lorem ipsum dolor sit amet" | cut -d ' ' -f 2
 ```
@@ -222,7 +222,7 @@ More info:
 
 ### grep
 
-```bash
+```text
 # Show previous and next lines when grepping
 grep -B 3 -A 3 foo README.txt
 
@@ -237,7 +237,7 @@ More Info:
 
 ### head
 
-```bash
+```text
 # Print the beginning n=10 lines of a file
 head -n 10 file.txt
 ```
@@ -248,7 +248,7 @@ More Info:
 
 ### set
 
-```bash
+```text
 # Exit immediately if a command exits with a non-zero status
 set -e
 ```
@@ -260,7 +260,7 @@ More Info:
 
 ### sed
 
-```bash
+```text
 TBC
 ```
 
@@ -271,7 +271,7 @@ More Info:
 
 ### xargs
 
-```bash
+```text
 # Delete all the kubernetes pods that have error state
 kubectl get pods | grep Error | awk '{print $1}' | xargs kubectl delete pod
 ```

@@ -99,7 +99,7 @@ List all containers
 
 Example Output:
 
-```bash
+```text
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS              PORTS                            NAMES
 f263b6710fdc        friendlyhello       "python app.py"     11 seconds ago      Up 8 seconds        80/tcp, 0.0.0.0:4000->5000/tcp   kind_chaum
 ```
@@ -114,7 +114,7 @@ List history of containers (Not only just the running ones)
 
 Example Output
 
-```bash
+```text
 CONTAINER ID        IMAGE               COMMAND             CREATED             STATUS                      PORTS                            NAMES
 f263b6710fdc        friendlyhello       "python app.py"     3 minutes ago       Up 3 minutes                80/tcp, 0.0.0.0:4000->5000/tcp   kind_chaum
 103ed3c668e1        friendlyhello       "python app.py"     18 minutes ago      Exited (0) 7 minutes ago                                     infallible_ride
@@ -128,7 +128,7 @@ List containers in quiet mode
 
 Example Output
 
-```bash
+```text
 f263b6710fdc
 103ed3c668e1
 46d16b7d611e
@@ -209,7 +209,7 @@ List available volumes
 
 Example Output:
 
-```bash
+```text
 DRIVER              VOLUME NAME
 local               55bd8f88e1307ab51f620bbb3b9578ceca8edbf0fee29b1fa2f5c62cad34c193
 local               jenkins_home
@@ -289,7 +289,7 @@ Join a machine in the swarm as worker
 
 Take down a single node swarm from the manager
 
-```bash
+```text
 docker swarm leave
 docker swarm leave --force
 ```

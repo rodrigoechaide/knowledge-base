@@ -1,6 +1,6 @@
 # curl cheat sheet
 
-```bash
+```text
 # Make an HTTP request passing a user
 curl -u user http://localhost:8080
 
