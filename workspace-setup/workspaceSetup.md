@@ -103,4 +103,5 @@ Note: To enable icons/glyphs (https://www.nerdfonts.com/) on spacevim and on iTe
 * slack
 * tfenv (brew install tfenv)
   * terraform
+* thunderbird
 * vscode
