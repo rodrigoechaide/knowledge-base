@@ -60,6 +60,7 @@
 
 ### PKI
 
+- [gpg cheat sheet](unix-cli-useful-tools-commands/pki/gpg.md)
 - [cfssl cheat sheet](unix-cli-useful-tools-commands/pki/cfssl.md)
 - [openssl cheat sheet](unix-cli-useful-tools-commands/pki/openssl.md)
 - [step cheat sheet](unix-cli-useful-tools-commands/pki/step.md)
