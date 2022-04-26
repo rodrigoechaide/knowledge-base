@@ -228,6 +228,8 @@
 * [clic](https://github.com/databricks/click): Command Line Interactive Controller for Kubernetes
 * [kubed-sh](https://kubed.sh/): Lets you execute a program in a Kubernetes cluster without having to create a container image or learn new concepts
 * [k2tf](https://github.com/sl1pm4t/k2tf): Kubernetes to Terraform converter
+* [k9s](https://k9scli.io/)
+* [lens](https://k8slens.dev/)
 
 ### Debugging Tools
 
