@@ -104,7 +104,31 @@ ZSH="$HOME/.oh-my-zsh" sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohm
 ## Install Custom Fonts
 
 ```text
-TBC
+
+
+# Install Powerline Fonts
+# https://github.com/powerline/fonts
+
+git clone https://github.com/powerline/fonts.git $HOME/.fonts --depth=1
+cd $HOME/.fonts
+./install.sh
+cd $HOME
+rm -rf $HOME/.fonts
+
+# Install Nerd Fonts
+# https://gist.github.com/davidteren/898f2dcccd42d9f8680ec69a3a5d350e
+# https://www.nerdfonts.com/
+
+# Configure fonts for vscode terminal
+# https://gist.github.com/rodrigoechaide/1c1717c2324a67423c2233f8d588992c
+
+
+# Configure font for iterm2
+# https://webinstall.dev/nerdfont/
+
+# Note: In order the special characters (such as the mac apple and other ones) to be shown properly in SpaceVim iterm2 should use nerd fonts which include powerline fonts.
+# Related issue https://github.com/SpaceVim/SpaceVim/issues/2291
+
 ```
 
 * Download and install

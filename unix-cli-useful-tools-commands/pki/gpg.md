@@ -16,3 +16,4 @@ More Info:
 
 * [gpg2](https://linux.die.net/man/1/gpg2)
 * [gpg documentation](https://gnupg.org/documentation/manuals/gnupg/)
+* [how-to-use-gpg-to-encrypt-and-sign-messages](https://www.digitalocean.com/community/tutorials/how-to-use-gpg-to-encrypt-and-sign-messages)
