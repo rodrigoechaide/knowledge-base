@@ -13,6 +13,9 @@ helm repo list
 # Add helm repository
 helm repo add <name> <url> <flags>
 
+# Add a private helm repository
+helm repo add <name> <url> --username <username> --password <password>
+
 # Search charts in repository (This will show only the latest version of each chart)
 helm search repo <repo_name>
 
@@ -45,6 +48,15 @@ helm pull <repo_name>/<chart_name> --untar --version <chart_version>
 
 # Get k8s manifest of a helm release
 helm get manifest <release_name>
+
+# Update helm dependencies
+helm dependency update <chart-path>
+
+# Make a template of a chart with custom values
+helm template <chart-path> -f <values-path-1> -f <values-path-2> -f <values-path-n> > result.yaml
+
+# Run installation with debug and dry-run flags (This will output the rendered templates)
+helm install --debug --dry-run <release-name> <chart-path>
 ```
 
 **Note:** If `--version` is not specified information about the latest version is retrieved.
