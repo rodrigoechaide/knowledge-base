@@ -113,12 +113,6 @@ If you have a new codebase with only two commits, you should run the following c
 git rebase -i --root
 ```
 
-## Modify Author of last commit
-
-```text
-git commit --amend --author="Author Name <email@address.com>" --no-edit
-```
-
 ## Remove last commit
 
 ```text
@@ -165,3 +159,21 @@ git config user.name "John Doe"
 git config --global user.email "johndoe@abc.com"
 git config --global user.name "John Doe"
 ```
+
+## Modify Author of last commit
+
+```text
+git commit --amend --author="Author Name <email@address.com>" --no-edit
+```
+
+## Enable Git Trace
+
+Enable Git Trace for more verbosity
+
+```text
+GIT_TRACE=1 <git-command>
+
+# Example
+GIT_TRACE=1 git commit --amend
+```
+
