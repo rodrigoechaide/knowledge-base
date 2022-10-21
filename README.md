@@ -6,7 +6,7 @@
 
 - [vim cheat sheet](code-editors/vim/cheat-sheet.md)
 
-### Vscode
+### vscode
 
 - [python cheat sheet](code-editors/vscode/python/cheat-sheet.md)
 

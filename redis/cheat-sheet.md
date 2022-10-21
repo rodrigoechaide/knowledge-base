@@ -33,3 +33,4 @@ keys *
 [redis-cli manual](https://redis.io/docs/manual/cli/)
 [data-types-tutorial](https://redis.io/docs/data-types/tutorial/)
 [How To Manage Redis Databases and Keys](https://www.digitalocean.com/community/cheatsheets/how-to-manage-redis-databases-and-keys)
+[Redis Best Practices](https://redis.com/redis-best-practices/introduction/)
