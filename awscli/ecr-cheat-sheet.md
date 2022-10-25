@@ -1,6 +1,4 @@
-# ECR cheat sheet
-
-## aws ecr commands
+# ecr cheat sheet
 
 ```text
 # get ecr registry credentials
@@ -8,7 +6,6 @@ aws ecr get-login-password --region <region>
 
 # get ecr registry credentials and pipe to docker login command
 aws ecr get-login-password --region <region> | docker login --username AWS --password-stdin <aws_account_id>.dkr.ecr.region.amazonaws.com
-
 ```
 
 ## References
