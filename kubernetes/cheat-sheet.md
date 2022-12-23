@@ -725,6 +725,9 @@ kubectl describe sc [sc_name]
 # Get Node List
 kubect get nodes -o wide
 
+# Filter a node with a selector
+k get nodes --selector [key]=[value]
+
 # Label a Node
 kubectl label [node_name] label=value
 
