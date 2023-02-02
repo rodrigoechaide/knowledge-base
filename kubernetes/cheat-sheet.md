@@ -497,6 +497,10 @@ kubectl label pod [pod_name] label-key=label-value --overwrite
 ```text
 # Jobs: https://kubernetes.io/docs/concepts/workloads/controllers/job/
 # CronJobs: https://kubernetes.io/docs/concepts/workloads/controllers/cron-jobs/
+
+# Trigger a cronjob manually
+kubectl create job --from=cronjob/<cronjob_name> <job_name>
+
 ```
 
 ### Manage ReplicaSets
