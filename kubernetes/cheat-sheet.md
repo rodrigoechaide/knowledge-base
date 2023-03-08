@@ -754,6 +754,9 @@ kubectl taint node [node_name] key=value:NoSchedule
 # Remove added taint
 kubectl taint nodes [node_name] key:NoSchedule-
 
+# Get events from a specific node
+kubectl get events --all-namespaces -o wide | grep -i <node_name>
+
 ```
 
 ### Get Monitoring and Cluster Information
