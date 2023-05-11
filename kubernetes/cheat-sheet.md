@@ -566,6 +566,9 @@ kubectl rollout pause deployment [deployment_name]
 # Resume the rollout after the rolling update looks good
 kubectl rollout resume deployment [deployment_name]
 
+# Restart the rollout of a deployment
+kubectl rollout restart deployment [deployment_name]
+
 # Scale a deployment
 kubectl scale deployment/[deployment_name] --replicas=[number_replicas]
 kubectl scale deploy [deployment_name] --replicas=[number_replicas] -n [namespace]
