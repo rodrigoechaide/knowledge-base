@@ -660,6 +660,8 @@ kubectl create secret docker-registry acr --docker-server=[private-registry-url]
 
 # Get Secrets
 kubectl get secrets
+kubectl get secret -o json [secret_name] | jq '.data | map_values(@base64d)'
+
 
 ```
 
