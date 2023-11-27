@@ -15,7 +15,7 @@ openssl ecparam -name prime256v1 -genkey -out k.prv
 openssl ec -in k.prv -pubout -out k.pub
 ```
 
-## CA and client/server certificates generation
+## CA and client/server certificate generation
 
 ```text
 # Generate the CA Key and Certificate
@@ -32,11 +32,23 @@ openssl x509 -req -sha256 -days 3650 -in client.csr -CA ca.crt -CAkey ca.key -se
 # Sign a client/server certificate using a CA certificate and specify Subject Alternate Names
 openssl x509 -req -extfile <(printf "subjectAltName=DNS:alternative.dns.name.one,DNS:alternative.dns.name.two") -days 3650 -in server.csr -CA ca.crt -CAkey ca.key -CAcreateserial -out server.crt
 
+# Check a certificate signing request
+openssl req -text -noout -verify -in CSR.csr
+
+# Check a private key
+openssl rsa -in privateKey.key -check
+
 # Check the created certificate
 openssl x509 -in server.crt -text -noout
+
+# Check a PKCS#12 file (.pfx or .p12)
+openssl pkcs12 -info -in keyStore.p12
+
+
 ```
 
 More Info:
 
 * [Creating a trusted CA and SAN certificate using OpenSSL](https://fabianlee.org/2018/02/17/ubuntu-creating-a-trusted-ca-and-san-certificate-using-openssl-on-ubuntu/)
 * [OpenSSL Essentials](https://www.digitalocean.com/community/tutorials/openssl-essentials-working-with-ssl-certificates-private-keys-and-csrs)
+* [The Most Common OpenSSL Commands](https://www.sslshopper.com/article-most-common-openssl-commands.html)
